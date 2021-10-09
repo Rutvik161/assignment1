@@ -1,13 +1,8 @@
 import Foundation 
 import CryptoSwift 
 
-var arr = [1,2,3,4,5,6]
+let n: Int = 0
 
-for n in arr{
-    if(n % 2 == 0){
-        print("\(n) is even")
-    }else{
-        print("\(n) is odd")
-    }
-}
+let evenOrOdd = n == 0 ? "neither even nor odd number" : n % 2 == 0 ? "an even number" : "an odd number"
 
+print("\(n) is \(evenOrOdd).")
