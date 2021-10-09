@@ -1,8 +1,12 @@
-import Foundation 
-import CryptoSwift 
+var n=5
+    if(n % 2 == 0)
 
-let n: Int = 0
+    {        print("\(n) is even")
 
-let evenOrOdd = n == 0 ? "neither even nor odd number" : n % 2 == 0 ? "an even number" : "an odd number"
+    }
 
-print("\(n) is \(evenOrOdd).")
+else    {
+
+        print("\(n) is odd")
+
+    }
