@@ -1,12 +1,38 @@
-var n=5
-    if(n % 2 == 0)
-
-    {        print("\(n) is even")
-
+enum NumError:Error
+{
+  case negative
+  var msg:String
+  {
+    switch self
+    {
+        case .negative : return "negative value Not Allowed"
     }
+  }
+}
 
-else    {
+func CheckNum(num:Int) throws
+{
+ if(num<0)
+ {
+    throw NumError.negative
+ }
+ if(num%2==0)
+ {
+   print("Even")
+ }
+ else
+ {
+   print("Odd")
+ }
+}
 
-        print("\(n) is odd")
-
+do
+{
+  try CheckNum(num:10)
+}catch
+{
+    if let error=error as?NumError
+    {
+      print(error.msg)
     }
+}
